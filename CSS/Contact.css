@@ -1,0 +1,728 @@
+/* Global Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Styles */
+header {
+    background-color: white;
+    padding: 0 3%;
+    height: 117px !important;
+    min-height: 117px;
+    max-height: 117px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1000;
+}
+
+/* Logo Styles */
+.logo {
+    height: 67px;
+    width: 140px;
+    display: flex;
+    align-items: center;
+    margin: 21px 0;
+}
+
+.logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: left center;
+}
+
+/* Navigation Styles */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+    font-weight: 500;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+nav ul li a i {
+    font-size: 14px;
+    margin-top: 2px;
+    transition: transform 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #8B4513;
+}
+
+/* Dropdown Menu */
+.dropdown .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 85%;
+    left: 140%;
+    transform: translateX(-50%);
+    background-color: white;
+    min-width: 220px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 10px 0;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.dropdown.active .dropdown-menu,
+.dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(5px);
+}
+
+.dropdown-menu li {
+    list-style: none;
+    width: 100%;
+}
+
+.dropdown-menu a { 
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f8f8f8;
+    color: #8B4513;
+    padding-left: 25px;
+}
+
+.dropdown.active .dropdown-toggle i,
+.dropdown:hover .dropdown-toggle i {
+    transform: rotate(180deg);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 992px) {
+    .dropdown .dropdown-menu {
+        position: static;
+        display: none;
+        transform: none;
+        width: 100%;
+        box-shadow: none;
+        border-radius: 0;
+        padding: 0;
+        margin-top: 10px;
+        border-left: 3px solid #8B4513;
+    }
+    
+    .dropdown.active .dropdown-menu,
+    .dropdown:hover .dropdown-menu {
+        transform: none;
+        display: block;
+    }
+    
+    .dropdown-menu a {
+        padding: 10px 15px 10px 30px;
+    }
+}
+
+/* Search Bar */
+.search-bar {
+    position: relative;
+    width: 200px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    outline: none;
+    padding-right: 35px;
+}
+
+.search-bar i {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+    cursor: pointer;
+}
+
+/* Sustainability Section */
+.sustainability-container {
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: 60px 20px 10px;
+}
+
+.sustainability-section {
+    width: 100%;
+}
+
+.sustainability-section h1 {
+    font-size: 31px;
+    color: #2c3e50;
+    margin-bottom: 13px;
+    font-weight: 600;
+    text-align: left;
+}
+
+.sustainability-section > p {
+    font-size: 18px;
+    color: #2B2B2B;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    max-width: 1300px;
+    text-align: justify;
+}
+
+/* Contact Form Styles */
+.contact-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 60px 20px 0px;
+}
+
+.contact-section {
+    width: 800px;
+    margin: 0;
+}
+
+.contact-section h1 {
+    font-size: 32px;
+    color: #000;
+    margin-bottom: 15px;
+    font-weight: 600;
+    text-align: left;
+}
+
+.contact-subtitle {
+    font-size: 16px;
+    color: #555;
+    text-align: left;
+    margin-bottom: 40px;
+    line-height: 1.6;
+    max-width: 800px;
+}
+
+.contact-form {
+    background: #fff;
+    padding: 10px 40px 40px 0px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 19px;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.contact-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.contact-option {
+    position: relative;
+}
+
+.contact-radio {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.contact-option-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 130px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 25px 15px 15px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: left;
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.contact-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    margin-bottom: 15px;
+    transition: all 0.2s ease;
+    display: block;
+    align-self: flex-start;
+}
+
+.contact-radio:checked + .contact-option-box .contact-icon {
+    filter: brightness(0) saturate(100%) invert(42%) sepia(86%) saturate(379%) hue-rotate(60deg) brightness(97%) contrast(83%);
+}
+
+.contact-option-box span {
+    font-size: 15px;
+    color: #333;
+    font-weight: 500;
+    line-height: 1.4;
+    display: block;
+    text-align: left;
+    width: 100%;
+}
+
+.contact-radio:checked + .contact-option-box {
+    border-color: #4a8f29;
+    background-color: #f8f9f8;
+    box-shadow: 0 0 0 1px #4a8f29;
+}
+
+.contact-radio:checked + .contact-option-box i,
+.contact-radio:checked + .contact-option-box span {
+    color: #4a8f29;
+}
+
+/* Add subtle hover effect */
+.contact-option-box:hover {
+    border-color: #c0c0c0;
+}
+
+/* Removed checkmark while keeping the icon and text layout */
+
+.form-control {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 15px;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #4a8f29;
+}
+
+textarea.form-control {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-row {
+    display: block;
+    margin: 0;
+}
+
+.form-row .form-group {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 25px;
+}
+
+/* Remove the half class since we're not using it anymore */
+.half {
+    width: 100% !important;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 10px;
+    margin-top: -42px;
+    width: 18px;
+    height: 18px;
+    min-width: 18px;
+    min-height: 18px;
+}
+
+.checkbox-group label {
+    margin: 0;
+    font-size: 16px;
+    color: #555;
+}
+
+.privacy-link {
+    color: #4a8f29;
+    text-decoration: none;
+}
+
+.privacy-link:hover {
+    text-decoration: underline;
+}
+
+.submit-btn {
+    display: block;
+    width: 154px;
+    margin: 30px 0px;
+    padding: 13px 5px;
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 43px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #3a7320;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-options {
+        flex-direction: column;
+    }
+    
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .form-row .form-group {
+        margin-bottom: 20px;
+    }
+    
+    .submit-btn {
+        width: 100%;
+    }
+}
+
+/* Main Content */
+main {
+    width: 100%;
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+
+
+/* About Hero Section */
+.about-hero {
+    width: 100%;
+    height: 397px !important;
+    max-height: 397px !important;
+    min-height: 397px !important;
+    overflow: hidden;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: relative;
+    display: block !important;
+    line-height: 0;
+}
+
+.about-hero-image {
+    width: 100%;
+    height: 397px !important;
+    max-height: 397px !important;
+    min-height: 397px !important;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #DFEBC3;
+    padding: 60px 0 30px;
+    color: white;
+    margin-top: auto;
+}
+
+.footer-logo {
+    height: 107px;
+    width: 160px;
+    display: flex;
+    align-items: center;
+    margin: 21px 0;
+}
+
+.footer-logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: left center;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    padding: 0 15px;
+}
+
+.footer-section h3 {
+    color: #000;
+    margin-bottom: 20px;
+    font-size: 18px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 2px;
+    background-color: #4a8f29;
+}
+
+.footer-section.about p {
+    color: #000;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-top: 15px;
+}
+
+.footer-section.links ul {
+    list-style: none;
+}
+
+.footer-section.links li {
+    margin-bottom: 7px;
+}
+
+.footer-section.links a {
+    color: #000;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.footer-section.links a:hover {
+    color: #4a8f29;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: #4a8f29;
+    font-size: 25px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icons a:hover { 
+    color: #000;
+    transform: translateY(-3px);
+}
+
+.newsletter p {
+    color: #000;
+    font-size: 14px;
+    margin: 15px 0;
+    line-height: 1.6;
+}
+
+.newsletter-form {
+    position: relative;
+    margin-top: 15px;
+}
+
+.newsletter-form input {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    outline: none;
+    background-color: #3F7A53;
+    color: white;
+    height: 40px;
+}
+
+.newsletter-form input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.newsletter-form button {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: white;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.newsletter-form button:hover {
+    background-color: #3F7A53;
+    color: white;
+} 
+
+/* Footer Bottom */
+.footer-bottom {
+    padding: 15px 70px 15px 19px;
+    border-top: 1px solid #e0e0e0;
+    margin-top: 30px;
+}
+
+.footer-bottom .container {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    text-align: left;
+}
+
+.footer-bottom p {
+    color: #000;
+    font-size: 14px;
+    margin: 0;
+}
+
+@media (min-width: 1920px) {
+    .contact-container {
+        max-width: 1800px;
+    }
+
+    .contact-section h1 {
+        font-size: 40px;
+    }
+
+    .form-group label {
+        font-size: 24px;
+    }
+
+    .form-control {
+        font-size: 19px;
+    }
+
+    .contact-icon {
+        width: 45px;
+        height: 45px;
+    }
+
+    .contact-option-box span {
+        font-size: 20px;
+    }
+
+    .contact-section {
+        width: 1200px;
+    }
+
+    .submit-btn {
+        font-size: 21px;
+    }
+
+    .checkbox-group input[type="checkbox"] {
+        margin-right: 10px;
+        margin-top: -58px;
+        width: 21px;
+        height: 21px;
+        min-width: 21px;
+        min-height: 21px;
+    }
+
+    .footer-content {
+        max-width: 1800px;
+    }
+
+    
+    .footer-logo {
+    height: 137px;
+    width: 190px;
+    }
+    
+    .footer-section h3 {
+    font-size: 24px;
+    }
+
+    .footer-section.links a {
+        font-size: 21px;
+    }
+
+    .social-icons a {
+        font-size: 32px;
+    }
+
+    .newsletter p {
+        font-size: 20px;
+    }
+
+    .newsletter-form input {
+        font-size: 19px;
+        height: 45px;
+    }
+    
+}

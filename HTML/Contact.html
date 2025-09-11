@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainability</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../CSS/Contact.css">
+</head>
+<body> 
+    <!-- Header --> 
+    <header>
+        <div class="logo">
+            <a href="/index.html">
+                <img src="/Pics/Ayush Logo.png" alt="Ayush Logo" class="logo-img">
+            </a>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="/HTML/About.html">About Us</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Brands <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/HTML/Ayush_Vedica.html">AYUSH VEDICA</a></li>
+                        <li><a href="/HTML/Flit.html">FLIT</a></li>
+                        <li><a href="/HTML/Fewa.html">FEWA</a></li>
+                        <li><a href="/HTML/Moi_Forest.html">MOI FOREST</a></li>
+                        <li><a href="#">DOCTOR COOK</a></li>
+                    </ul>
+                </li>
+                <li><a href="/HTML/Sustainability.html">Sustainability</a></li>
+                <li><a href="/HTML/Contact.html" class="active">Contact</a></li> 
+                <li><a href="#">Newsroom</a></li>
+            </ul>
+        </nav>
+        
+        <div class="search-bar">
+            <input type="text" placeholder="Search">
+            <i class="fas fa-search"></i>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="about-hero">
+        <img src="/Pics/Contact Us.png" alt="Contact Us" class="about-hero-image">
+    </div>
+
+    <!-- Main Content -->
+    <main class="contact-container">
+        <section class="contact-section">
+            <h1>Email Us</h1>
+            
+            <form class="contact-form">
+                <div class="form-group">
+                    <label>What are you contacting us about? *</label>
+                    <div class="contact-options">
+                        <div class="contact-option">
+                            <input type="radio" name="contact-about" id="general" class="contact-radio" checked>
+                            <label for="general" class="contact-option-box">
+                                <img src="/Pics/C1.png" alt="Commercial Enquiries" class="contact-icon">
+                                <span>Commercial Enquiries</span>
+                            </label>
+                        </div>
+                        <div class="contact-option">
+                            <input type="radio" name="contact-about" id="partnership" class="contact-radio">
+                            <label for="partnership" class="contact-option-box">
+                                <img src="/Pics/C2.png" alt="Media & Communication" class="contact-icon">
+                                <span>Media & Communication</span>
+                            </label>
+                        </div>
+                        <div class="contact-option">
+                            <input type="radio" name="contact-about" id="careers" class="contact-radio">
+                            <label for="careers" class="contact-option-box">
+                                <img src="/Pics/C3.png" alt="Human Resources" class="contact-icon">
+                                <span>Human Resources</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="brand">Brand *</label>
+                    <select id="brand" name="brand" class="form-control" required>
+                        <option value="" disabled selected>Select a brand</option>
+                        <option value="ayush-vedica">AYUSH VEDICA</option>
+                        <option value="flit">FLIT</option>
+                        <option value="fewa">FEWA</option>
+                        <option value="moi-forest">MOI FOREST</option>
+                        <option value="doctor-cook">DOCTOR COOK</option>    
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group half">
+                        <label for="first-name">First Name *</label>
+                        <input type="text" id="first-name" name="first-name" class="form-control" required>
+                    </div>
+                    <div class="form-group half">
+                        <label for="last-name">Last Name *</label>
+                        <input type="text" id="last-name" name="last-name" class="form-control" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="company">Company</label>
+                    <input type="text" id="company" name="company" class="form-control">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group half">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" class="form-control">
+                    </div>
+                    <div class="form-group half">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="country">Country *</label>
+                    <select id="country" name="country" class="form-control" required>
+                        <option value="" disabled selected>Select your country</option>
+                        <option value="india">India</option>
+                        <option value="usa">United States</option>
+                        <option value="uk">United Kingdom</option>
+                        <option value="canada">Canada</option>
+                        <option value="australia">Australia</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" rows="5" class="form-control" required></textarea>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="privacy-policy" name="privacy-policy" required>
+                    <label for="privacy-policy">
+                        At Ayush we take your privacy seriously and will only use your personal information to provide the products and services you have requested from us. If you consent to us collecting and storing your data from this form please tick the checkbox. For more information please view our Privacy Policy.
+                    </label>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <div class="footer-logo">
+                    <a href="/index.html">
+                        <img src="/Pics/Ayush Logo Footer.png" alt="AYUSH Logo" class="footer-logo-img">
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/HTML/About.html">About Us</a></li>
+                    <li><a href="#">Our Brands</a></li>
+                    <li><a href="/HTML/Sustainability.html">Sustainability</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Investors</a></li>
+                    <li><a href="#">Media</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section social" style="margin-left: -50px;">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/company/ayush-consumer-brands/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/ayushvedica" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/917289896336" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section newsletter">
+                <h3>Newsletter</h3>
+                <p>Subscribe to our Newsletter for updates and Exclusive offers</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Your Email">
+                    <button type="submit">→</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2022 Ayush Consumer Brands. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../JS/dropdown.js"></script>
+</body>
+</html>
